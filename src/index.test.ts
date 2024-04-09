@@ -14,7 +14,7 @@ describe("grammar", () => {
     { expression: "a", succeeded: true },
     { expression: "A", succeeded: true },
     { expression: "camelCase", succeeded: true },
-    // TODO: support these are nah?
+    // TODO: support these or nah?
     // { expression: "snake_case", succeeded: true },
     // { expression: "kebab-case", succeeded: true },
     // { expression: "varWithNumber1", succeeded: true },
