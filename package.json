@@ -1,5 +1,5 @@
 {
-  "name": "ohm-experiments",
+  "name": "propositional-logic-calculator",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -15,7 +15,7 @@
     "@types/node": "^20.12.5",
     "typescript": "^5.4.4"
   },
-  "dependencies": {
-    "ohm-js": "^17.1.0"
-  }
+  "workspaces": [
+    "packages/*"
+  ]
 }
