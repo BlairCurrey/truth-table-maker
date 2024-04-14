@@ -43,6 +43,9 @@ function handleInputChange(event: any) {
   }
 }
 
-document
-  .getElementById("propositionInput")!
-  .addEventListener("input", handleInputChange);
+const propositionInput = document.getElementById("propositionInput")!;
+propositionInput.addEventListener("input", handleInputChange);
+
+window.onload = function () {
+  propositionInput.focus();
+};
