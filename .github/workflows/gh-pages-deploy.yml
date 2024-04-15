@@ -42,7 +42,8 @@ jobs:
         run: pnpm --filter website build
       - name: Upload pages artifact
         uses: actions/upload-pages-artifact@v3
-        with: ./packages/website/dist
+        with:
+          path: "./packages/website/dist"
 
   deploy:
     environment:
