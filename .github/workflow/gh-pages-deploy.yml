@@ -39,10 +39,10 @@ on:
         - name: Install dependencies
           run: pnpm install
         - name: Build
-          run: pnpm build
+          run: pnpm --filter website build
         - name: Upload pages artifact
           uses: actions/upload-pages-artifact@v3
-          with: ./dist
+          with: ./packages/website/dist
 
     deploy:
       environment:
