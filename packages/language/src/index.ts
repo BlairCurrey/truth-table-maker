@@ -155,17 +155,3 @@ export function makeTruthTable(expression: string) {
 
   return table;
 }
-
-const x = [
-  ["a", "a"],
-  [false, false],
-  [true, true],
-];
-
-const x2 = [
-  ["a", "b", "a && b"],
-  [false, false, false],
-  [false, true, false],
-  [true, false, false],
-  [true, true, true],
-];
