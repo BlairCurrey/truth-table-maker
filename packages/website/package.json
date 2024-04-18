@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build:dev": "tsc && vite build",
+    "build:prod": "tsc && vite build --base '/truth-table-maker/'",
     "preview": "vite preview"
   },
   "keywords": [],

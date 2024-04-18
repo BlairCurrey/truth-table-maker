@@ -41,7 +41,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Build
-        run: pnpm --filter website build
+        run: pnpm --filter website build:prod
       - name: Upload pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
