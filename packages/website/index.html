@@ -14,82 +14,131 @@
         background-color: #ffffff;
       }
 
+      .section {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        margin-bottom: 20px;
+      }
+
+      /* LEGEND TABLE */
+
+      #legend table {
+        border-collapse: collapse;
+        border: 1px solid #000;
+        font-family: monospace;
+      }
+
+      #legend th,
+      #legend td {
+        padding: 4px;
+        text-align: center;
+      }
+
+      #legend td {
+        background-color: #ffffff;
+        text-align: left;
+      }
+
+      #legend th {
+        /* font-family: monospace; */
+        background-color: #e2e2e2;
+      }
+
+      #legend th:first-child {
+        border-right: 1px solid black;
+      }
+
       #propositionInput {
         width: 100%;
       }
 
+      /* RESULT TABLE */
+
       #result {
         display: flex;
         justify-content: center;
-        margin-top: 20px;
+        /* margin-top: 20px; */
         font-family: monospace;
         font-size: 14px;
       }
 
-      #table-wrapepr {
-        background-color: #fafafa;
-      }
-
-      table {
+      #result table {
         border-collapse: collapse;
         border: 1px solid #000;
       }
 
-      th,
-      td {
+      #result th,
+      #result td {
         padding: 12px;
         text-align: center;
       }
 
-      td {
+      #result td {
         background-color: #ffffff;
       }
 
-      th {
+      #result th {
         background-color: #e2e2e2;
       }
 
-      tr:first-child {
+      #result tr:first-child {
         border-bottom: 1px solid black;
       }
 
-      table th:last-child,
-      td:last-child {
+      #result table th:last-child,
+      #result table td:last-child {
         font-weight: bold;
         border-right: none;
       }
 
-      /* td:last-child {
+      /* #result td:last-child {
         background-color: #f2f2f2f2;
       } */
     </style>
   </head>
   <body>
     <div id="app">
-      <h1>Truth Table Maker</h1>
-      <h2>Syntax:</h2>
-      <p>Variables can be any combination of alphabetic characters.</p>
-      <h3>Operators</h3>
-      <ul>
-        <li>
-          <strong><code>&&</code></strong> - Logical AND
-        </li>
-        <li>
-          <strong><code>||</code></strong> - Logical OR
-        </li>
-        <li>
-          <strong><code>!</code></strong> - Logical NOT
-        </li>
-        <li>
-          <strong><code>()</code></strong> - Group
-        </li>
-      </ul>
-      <input
-        type="text"
-        placeholder="Enter your proposition"
-        id="propositionInput"
-      />
-      <div id="result"></div>
+      <h1>Truth Tables</h1>
+      <div class="section">
+        <div id="examples">
+          <!-- TODO: make button that injects these into input? -->
+          <h2>Examples</h2>
+          <ul>
+            <li><code>a && b</code></li>
+            <li><code> a && !(b || c)</code></li>
+          </ul>
+        </div>
+        <div id="legend">
+          <h2>Operators</h2>
+          <table>
+            <tr>
+              <th>&&</th>
+              <td>Logical AND</td>
+            </tr>
+            <tr>
+              <th>||</th>
+              <td>Logical OR</td>
+            </tr>
+            <tr>
+              <th>!</th>
+              <td>Logical NOT</td>
+            </tr>
+            <tr>
+              <th>()</th>
+              <td>Group</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="section">
+        <input
+          type="text"
+          placeholder="Enter your proposition"
+          id="propositionInput"
+        />
+      </div>
+      <div id="result" class="section"></div>
     </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
