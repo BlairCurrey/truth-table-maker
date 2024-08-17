@@ -4,7 +4,10 @@ const resultDiv = document.querySelector("#result")!;
 let inputValue = "";
 
 function createHtmlTable(truthTable: (string[] | boolean[])[]) {
+  const tableWrapper = document.createElement("div");
+  tableWrapper.id = "table-wrapper";
   const table = document.createElement("table");
+  tableWrapper.appendChild(table);
 
   // Create header row
   const headerRow = document.createElement("tr");
@@ -22,13 +25,13 @@ function createHtmlTable(truthTable: (string[] | boolean[])[]) {
     const tr = document.createElement("tr");
     row.forEach((cell) => {
       const td = document.createElement("td");
-      td.textContent = cell.toString();
+      td.textContent = cell ? "T" : "F";
       tr.appendChild(td);
     });
     table.appendChild(tr);
   }
 
-  return table;
+  return tableWrapper;
 }
 
 function handleInputChange(event: any) {
