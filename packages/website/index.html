@@ -6,7 +6,7 @@
     <title>Truth Table Maker</title>
     <style>
       body {
-        font-family: Arial, sans-serif;
+        font-family: math;
         margin: 0;
         padding: 0;
         display: flex;
@@ -14,11 +14,15 @@
         background-color: #ffffff;
       }
 
+      h2 {
+        margin: 1.25rem 0;
+      }
+
       .section {
         display: flex;
         flex-direction: row;
         gap: 40px;
-        margin-bottom: 20px;
+        margin-bottom: 40px;
       }
 
       /* LEGEND TABLE */
@@ -51,14 +55,14 @@
 
       #propositionInput {
         width: 100%;
+        padding: 8px;
+        font-family: monospace;
       }
 
       /* RESULT TABLE */
 
       #result {
         display: flex;
-        justify-content: center;
-        /* margin-top: 20px; */
         font-family: monospace;
         font-size: 14px;
       }
@@ -101,14 +105,6 @@
     <div id="app">
       <h1>Truth Tables</h1>
       <div class="section">
-        <div id="examples">
-          <!-- TODO: make button that injects these into input? -->
-          <h2>Examples</h2>
-          <ul>
-            <li><code>a && b</code></li>
-            <li><code> a && !(b || c)</code></li>
-          </ul>
-        </div>
         <div id="legend">
           <h2>Operators</h2>
           <table>
@@ -129,6 +125,14 @@
               <td>Group</td>
             </tr>
           </table>
+        </div>
+        <div id="examples">
+          <h2>Examples</h2>
+          <p>Variables can be any combination of alphabetic characters.</p>
+          <ul>
+            <li><code>a && b</code></li>
+            <li><code> a && !(b || c)</code></li>
+          </ul>
         </div>
       </div>
       <div class="section">
